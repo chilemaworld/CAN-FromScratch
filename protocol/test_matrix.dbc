@@ -1,0 +1,22 @@
+VERSION ""
+
+NS_ :
+BS_:
+
+BU_: ABS_ECU E_ECU
+
+BO_ 291 WheelSpeedFrame: 8 ABS_ECU
+ SG_ FrontLeftSpeed : 0|16@1+ (0.01,0) [0|250] "km/h" Vector__XXX
+ SG_ FrontRightSpeed : 16|16@1+ (0.01,0) [0|250] "km/h" Vector__XXX
+
+BO_ 512 EngineStatusFrame: 8 E_ECU
+ SG_ EngineTemp : 7|8@0- (1.0,-40) [-40|215] "C" Vector__XXX
+
+BO_ 600 MuxDemoFrame: 8 E_ECU
+ SG_ ModeSwitch M : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ NormalData : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BatteryVoltage m0 : 8|16@1+ (0.01,0) [0|16] "V" Vector__XXX
+ SG_ MotorCurrent m1 : 8|16@1+ (0.1,-100) [-100|100] "A" Vector__XXX
+
+VAL_ 512 EngineTemp 215 "Overheat" -40 "ExtremeCold" ;
+VAL_ 600 ModeSwitch 1 "SportMode" 0 "EcoMode" ;

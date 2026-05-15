@@ -1,0 +1,5 @@
+# Build artifacts
+obj/
+
+# Documentation not uploaded
+PROJECT_STUDY_GUIDE.md
